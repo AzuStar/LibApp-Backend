@@ -13,7 +13,7 @@ namespace Backend.Services
         /// <returns></returns>
         AuthenticateResponse Challenge(string email, string pass);
 
-        AuthenticateResponse Register(string email, string pass);
+        void Register(string email, string pass);
 
         // Utils to get user by id or email
         User GetById(long id);

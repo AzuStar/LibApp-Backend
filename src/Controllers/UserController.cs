@@ -36,7 +36,7 @@ namespace Backend.Controllers
                         ErrorMessage = "Email is in incorrect format."
                     });
 
-                
+                _userService.Register(email, pass);
                 return Ok();
             }
             catch (Exception e)

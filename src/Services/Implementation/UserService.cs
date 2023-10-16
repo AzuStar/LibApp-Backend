@@ -70,11 +70,11 @@ namespace Backend.Services
             return new AuthenticateResponse(user, jwtToken, newRefreshToken.Token);
         }
 
-        public AuthenticateResponse Register(string email, string pass)
+        public void Register(string email, string pass)
         {
             User u = GetByEmail(email);
             if (u != null)
-                return null;
+                throw new Exception("User already exists");
 
             u = new User()
             {
@@ -86,7 +86,6 @@ namespace Backend.Services
             _dataContext.Update(u);
             _dataContext.SaveChanges();
 
-            return Challenge(email, pass);
         }
 
 
