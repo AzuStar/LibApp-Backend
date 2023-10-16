@@ -1,0 +1,7 @@
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.csproj.AssemblyReference.cache
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.AssemblyInfoInputs.cache
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.AssemblyInfo.cs
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.csproj.CoreCompileInputs.cache
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kilanth\Documents\.git\dotnet\LibraryApp-monolith\Backend\src\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cache
