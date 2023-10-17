@@ -30,6 +30,7 @@ namespace Backend.Controllers
             // password is already hashed and salted on client side
             try
             {
+                // only required during registration
                 if (!Utils.IsValidEmail(email))
                     return BadRequest(new ErrorResponse()
                     {
@@ -53,23 +54,22 @@ namespace Backend.Controllers
         /// <returns></returns>
         [AllowAnonymous]
         [ProducesResponseType(typeof(AuthenticateResponse), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status401Unauthorized)]
         [HttpPost("login-email")]
         public IActionResult LoginEmail(string email, string pass)
         {
-            if (!Utils.IsValidEmail(email))
-                return BadRequest(new ErrorResponse()
-                {
-                    ErrorMessage = "Password or email is incorrect."
-                });
-
-            AuthenticateResponse ar = _userService.Challenge(email, pass);
-            if (ar == null)
-                return Unauthorized(new ErrorResponse()
-                {
-                    ErrorMessage = "Password or email is incorrect."
-                });
+            AuthenticateResponse ar;
+            // try
+            // {
+                ar = _userService.Challenge(email, pass);
+            // }
+            // catch (Exception e)
+            // {
+            //     return StatusCode(StatusCodes.Status401Unauthorized, new ErrorResponse()
+            //     {
+            //         ErrorMessage = "Password or email is incorrect."
+            //     });
+            // }
 
             CookieOptions cookieOptions = new CookieOptions()
             {

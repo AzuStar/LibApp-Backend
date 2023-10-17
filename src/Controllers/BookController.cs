@@ -25,9 +25,14 @@ namespace Backend.Controllers
         {
             if (User.Identity is ClaimsIdentity identity && identity.IsAuthenticated)
             {
-                var userClaim = identity.FindFirst("group");
-                if (userClaim != null && userClaim.Value == "staff")
+                Claim? userClaim = identity.FindFirst("group");
+                if (userClaim != null)
                 {
+                    if(userClaim.Value == "staff"){
+                        // return all books of the branch
+                    } else if (userClaim.Value == "user"){
+                        // return all books of the branch that are not rented
+                    }
                     return Ok();
                 }
             }

@@ -16,7 +16,7 @@ namespace Backend.Models
         public bool IsExpired => DateTime.UtcNow >= Expires;
         public DateTime Created { get; set; }
         public DateTime? Revoked { get; set; }
-        public string ReplacedByToken { get; set; }
+        public string? ReplacedByToken { get; set; }
         public bool IsActive => Revoked == null && !IsExpired;
     }
 }
